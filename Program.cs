@@ -22,16 +22,37 @@ class Program
     {
         string hiddenWord = HiddenWord("carte");
         char[] hiddenWordTable = {'c', 'a', 'r', 't', 'e'};
-        string playerAnswer;
+        string? playerAnswer = "";
 
 
-        for(int i =0;i == 6; i++)
+        for(int i = 0;i == 6 || playerAnswer == hiddenWord; i++)
         {
+            if(playerAnswer == hiddenWord)
+            {
+                Console.WriteLine("----------------------------------------------------------------------");
+                Console.Write("Vous avez trouvé le mot !");
+                Console.Write("Le mot était " + hiddenWord + " !");
+                break;
+            }
+            Console.WriteLine("----------------------------------------------------------------------\n\n");
+
+            for (int j = 0; j == 5; j++)
+            {
+
+            }
+
             Console.WriteLine("----------------------------------------------------------------------");
             Console.WriteLine("Veuillez saisir un mot français de 5 lettre");
             Console.WriteLine("----------------------------------------------------------------------");
             playerAnswer = Console.ReadLine();
         }
+        if(playerAnswer =!hiddenWord)
+        {
+            Console.WriteLine("----------------------------------------------------------------------");
+            Console.Write("Vous n'avez pas trouvé le mot !");
+            Console.Write("Le mot était " + hiddenWord + " !");
+        }
+        Console.WriteLine("----------------------------------------------------------------------");
     }
 }
 

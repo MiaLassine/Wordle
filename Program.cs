@@ -12,11 +12,26 @@ namespace Wordle;
 
 class Program
 {
+    static string HiddenWord(string hiddenWord)
+    {
+        hiddenWord = "carte";
+        return hiddenWord;
+    }
 
     static void Main(string[] args)
     {
+        string hiddenWord = HiddenWord("carte");
+        char[] hiddenWordTable = {'c', 'a', 'r', 't', 'e'};
+        string playerAnswer;
 
 
+        for(int i =0;i == 6; i++)
+        {
+            Console.WriteLine("----------------------------------------------------------------------");
+            Console.WriteLine("Veuillez saisir un mot français de 5 lettre");
+            Console.WriteLine("----------------------------------------------------------------------");
+            playerAnswer = Console.ReadLine();
+        }
     }
 }
 

@@ -46,7 +46,7 @@ class Program
             Console.WriteLine("----------------------------------------------------------------------");
             playerAnswer = Console.ReadLine();
         }
-        if(playerAnswer =!hiddenWord)
+        if(playerAnswer != hiddenWord)
         {
             Console.WriteLine("----------------------------------------------------------------------");
             Console.Write("Vous n'avez pas trouvé le mot !");
